@@ -60,6 +60,38 @@ const config = {
         source: "/api/skills/:path*",
         destination: `${gatewayURL}/api/skills/:path*`,
       });
+      rewrites.push({
+        source: "/api/models/:path*",
+        destination: `${gatewayURL}/api/models/:path*`,
+      });
+      rewrites.push({
+        source: "/api/threads/:threadId/suggestions",
+        destination: `${gatewayURL}/api/threads/:threadId/suggestions`,
+      });
+      rewrites.push({
+        source: "/api/threads/:threadId/:path*",
+        destination: `${gatewayURL}/api/threads/:threadId/:path*`,
+      });
+      rewrites.push({
+        source: "/api/memory",
+        destination: `${gatewayURL}/api/memory`,
+      });
+      rewrites.push({
+        source: "/api/memory/:path*",
+        destination: `${gatewayURL}/api/memory/:path*`,
+      });
+      rewrites.push({
+        source: "/api/uploads/:path*",
+        destination: `${gatewayURL}/api/uploads/:path*`,
+      });
+      rewrites.push({
+        source: "/api/mcp/:path*",
+        destination: `${gatewayURL}/api/mcp/:path*`,
+      });
+      rewrites.push({
+        source: "/api/:path*",
+        destination: `${gatewayURL}/api/:path*`,
+      });
     }
 
     return rewrites;
